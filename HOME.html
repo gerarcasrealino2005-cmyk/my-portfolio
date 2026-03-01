@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00f5d4;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.home {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.section h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    background: linear-gradient(to right, #00f5d4, #00bbf9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* glowing frame with image inside */
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid #00f5d4;
+    box-shadow: 0 0 30px rgba(0, 245, 212, 0.6);
+    margin: 30px 0;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 50px rgba(0, 245, 212, 0.9);
+}
+
+.btn {
+    padding: 12px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00f5d4, #00bbf9);
+    color: #000;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f5d4;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="HOME.html">Home</a></li>
+<li><a href="PROJECTS.html">My Projects</a></li>
+<li><a href="ABOUT.html">About Me</a></li>
+<li><a href="CONTACT.html">Contacts</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="section home">
+<h1>WELCOME TO MY PORTFOLIO</h1>
+<h2>REALINO M. GERARCAS</h2>
+<h2>BSCS - 2C</h2>
+
+<img src="junior.jpg" alt="" class="profile-img">
+
+<a href="PROJECTS.html" class="btn">View My Work</a>
+</section>
+
+</body>
+</html>
